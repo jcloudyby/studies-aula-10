@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 2</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font: normal 18pt Arial;
+        }
+        div#area{
+            background: rgb(196, 97, 61);
+            font: bold 20pt Arial;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id='area' onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja!
+    </div>
+    <script>
+        function clicar() {
+            var ar = window.document.getElementById('area');
+            ar.innerText = 'Clicou!'
+            ar.style.background = 'blue'
+        }
+        function entrar(){
+            var ar = window.document.getElementById('area')
+            ar.innerText = 'Entrou!'
+        }
+        function sair() {
+            var ar = window.document.getElementById('area')
+            ar.innerText = 'saiu!'
+            
+        }
+    </script>
+</body>
+</html>
